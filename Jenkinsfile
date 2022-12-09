@@ -7,7 +7,6 @@ pipeline{
             }
             steps{
                 sh 'ps -ef'
-                sh 'sudo systemctl status jenkins'
             }
         }
         stage('2-EngAnakua'){
@@ -16,7 +15,6 @@ pipeline{
             }
             steps{
                 sh 'ps -ef'
-                sh 'sudo systemctl status jenkins'
             }
         }
     }
