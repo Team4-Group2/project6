@@ -19,15 +19,18 @@ pipeline{
         }
         stage('3-Stage3'){
             parallel{
-                agent{
-                    label 'slave2'
-                }
                 stage('3-Stage3-1'){
+                    agent{
+                        label 'slave2'
+                    }
                     steps{
                         echo 'Parallel action1'
                     }
                 }
                 stage('4-Stage3-2'){
+                    agent{
+                        label 'slave2'
+                    }
                     steps{
                         echo 'Parallel action2'
                     }
