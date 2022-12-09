@@ -9,7 +9,7 @@ pipeline{
                 sh 'ps -ef'
             }
         }
-        stage("2-Stage2){
+        stage('2-Stage2'){
             agent{
                 label 'slave1'
             }
