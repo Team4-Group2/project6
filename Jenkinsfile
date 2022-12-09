@@ -18,10 +18,10 @@ pipeline{
             }
         }
         stage('3-Stage3'){
-            agent{
-                label 'slave2'
-            }
             parallel{
+                agent{
+                    label 'slave2'
+                }
                 stage('3-Stage3-1'){
                     steps{
                         echo 'Parallel action1'
